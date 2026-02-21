@@ -9,14 +9,25 @@ It contains:
 
 This project showcases **quantitative finance expertise**, Python programming skills, and the ability to **apply theoretical models to real-world data**.
 
-## Formulas Used
-Call Option Price: C = S N(d1) - K e^{-rT} N(d2)  
-Put Option Price: P = K e^{-rT} N(-d2) - S N(-d1)  
-Delta (Call): Δ_call = N(d1)  
-Delta (Put): Δ_put = N(d1) - 1  
+## Formula Explanation
+The Black–Scholes formulas used:
+
+**Call Option Price:**  
+C = S * N(d1) - K * e^(-rT) * N(d2)
+
+**Put Option Price:**  
+P = K * e^(-rT) * N(-d2) - S * N(-d1)
 
 Where:  
-d1 = [ln(S/K) + (r + 0.5σ²)T] / (σ √T),  d2 = d1 - σ √T  
+- S = stock price  
+- K = strike price  
+- T = time to maturity  
+- r = risk-free rate  
+- σ = volatility  
+- N() = cumulative distribution function of the standard normal distribution  
+
+d1 = (ln(S/K) + (r + 0.5*σ²)*T) / (σ * sqrt(T))  
+d2 = d1 - σ * sqrt(T)
 
 Legend of Variables:  
 - S = Current stock price  
@@ -37,17 +48,11 @@ Legend of Variables:
 - No dividends during the option’s life  
 - Constant volatility and risk-free rate  
 
-## Next Steps / Extensions
-- Extend to **additional Greeks** (Gamma, Theta, Vega)  
-- Monte Carlo simulations for multi-asset portfolios  
-- Portfolio-level risk visualization  
-- Integrate more real market data for multiple stocks  
-
-## Optional: Run the Notebook
+## Run the Notebook
 For users who want to execute the code:  
 - Clone the repository: `git clone https://github.com/Laeticia-cwy/Black-Scholes-Option-Pricing.git`  
 - Install dependencies: `pip install numpy scipy matplotlib yfinance`  
 - Open the Jupyter notebook and run all cells  
 
 ## Impact
-This project demonstrates the ability to **combine quantitative finance theory with real-world data**, producing a **professional, visually appealing, and actionable tool** for option pricing and risk assessment.
+This project demonstrates the ability to **combine quantitative finance theory with real-world data**
