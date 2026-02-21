@@ -1,36 +1,32 @@
-# Black–Scholes Option Pricing Model
+# Black-Scholes Option Pricing
 
 ## Project Overview
-This project implements the Black–Scholes model to price European call and put options.  
-It includes basic visualizations of option prices and Delta (sensitivity to stock price) to illustrate how option values change with underlying parameters.
+This project implements the **Black-Scholes model** to calculate the prices of **European call and put options**. It also computes the **Delta Greeks** to measure sensitivity of option prices to stock price changes. Visualizations are included to illustrate how option prices and Delta vary with the underlying stock price.  
 
-## Formula Explanation
-The Black–Scholes formulas used:
+## Features
+- Black-Scholes call and put pricing functions  
+- Delta calculation for both call and put options  
+- Plots of option prices vs stock price  
+- Plots of Delta vs stock price  
+- Optional integration with **real stock data** for applied analysis  
 
-**Call Option Price:**  
-C = S * N(d1) - K * e^(-rT) * N(d2)
-
-**Put Option Price:**  
-P = K * e^(-rT) * N(-d2) - S * N(-d1)
-
+## Formulas Used
+- **Call Option Price:**  
+\[
+C = S N(d_1) - K e^{-rT} N(d_2)
+\]
+- **Put Option Price:**  
+\[
+P = K e^{-rT} N(-d_2) - S N(-d_1)
+\]
+- **Delta (Call):** \( \Delta_{call} = N(d_1) \)  
+- **Delta (Put):** \( \Delta_{put} = N(d_1) - 1 \)  
 Where:  
-- S = stock price  
-- K = strike price  
-- T = time to maturity  
-- r = risk-free rate  
-- σ = volatility  
-- N() = cumulative distribution function of the standard normal distribution  
+\[
+d_1 = \frac{\ln(S/K) + (r + 0.5\sigma^2)T}{\sigma \sqrt{T}}, \quad d_2 = d_1 - \sigma \sqrt{T}
+\]
 
-d1 = (ln(S/K) + (r + 0.5*σ²)*T) / (σ * sqrt(T))  
-d2 = d1 - σ * sqrt(T)
-
-## Features Implemented
-- Pricing functions for European **Call** and **Put** options
-- Simple plots: Option price vs Stock price
-- Greeks: **Delta** (Call & Put)
-- Markdown sections: Assumptions and Limitations
-
-## Example Output
-```text
-Call price (S=100, K=100, T=1, r=0.05, σ=0.2): 10.45
-Put price (S=100, K=100, T=1, r=0.05, σ=0.2): 5.57
+## How to Run
+1. Clone the repository:  
+```bash
+git clone https://github.com/Laeticia-cwy/Black-Scholes-Option-Pricing.git
