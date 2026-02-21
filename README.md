@@ -18,16 +18,11 @@ C = S * N(d1) - K * e^(-rT) * N(d2)
 **Put Option Price:**  
 P = K * e^(-rT) * N(-d2) - S * N(-d1)
 
-Where:  
-- S = stock price  
-- K = strike price  
-- T = time to maturity  
-- r = risk-free rate  
-- σ = volatility  
-- N() = cumulative distribution function of the standard normal distribution  
+Delta (Call): Δ_call = N(d1)  
+Delta (Put): Δ_put = N(d1) - 1
 
-d1 = (ln(S/K) + (r + 0.5*σ²)*T) / (σ * sqrt(T))  
-d2 = d1 - σ * sqrt(T)
+d1 = [ln(S/K) + (r + 0.5σ²)T] / (σ √T)
+d2 = d1 - σ √T  
 
 Legend of Variables:  
 - S = Current stock price  
