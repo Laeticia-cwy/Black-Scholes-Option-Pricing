@@ -53,6 +53,3 @@ For users who want to execute the code:
 - Clone the repository: `git clone https://github.com/Laeticia-cwy/Black-Scholes-Option-Pricing.git`  
 - Install dependencies: `pip install numpy scipy matplotlib yfinance`  
 - Open the Jupyter notebook and run all cells  
-
-## Impact
-This project demonstrates the ability to **combine quantitative finance theory with real-world data**
