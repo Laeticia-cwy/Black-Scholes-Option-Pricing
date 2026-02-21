@@ -8,22 +8,19 @@ This project demonstrates the **Black-Scholes model** for pricing **European cal
 The project showcases **quantitative finance expertise**, Python programming skills, and the ability to apply theoretical models to real-world data.
 
 ## Formulas Used
-- **Call Option Price:**  
-\[
-C = S N(d_1) - K e^{-rT} N(d_2)
-\]
-- **Put Option Price:**  
-\[
-P = K e^{-rT} N(-d_2) - S N(-d_1)
-\]
-- **Delta (Call):** \( \Delta_{call} = N(d_1) \)  
-- **Delta (Put):** \( \Delta_{put} = N(d_1) - 1 \)  
 
-Where:  
-\[
+**Call Option Price:**  
+
+```math
+C = S N(d_1) - K e^{-rT} N(d_2)
+Put Option Price:
+P = K e^{-rT} N(-d_2) - S N(-d_1)
+Delta(Put):
+\Delta_{\text{call}} = N(d_1)
+\Delta_{\text{put}} = N(d_1) - 1
+Where
 d_1 = \frac{\ln(S/K) + (r + 0.5\sigma^2)T}{\sigma \sqrt{T}}, \quad
 d_2 = d_1 - \sigma \sqrt{T}
-\]
 
 ## Features
 - Compute **European call and put option prices**  
